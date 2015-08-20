@@ -37,10 +37,10 @@ allData <- allData %>%
 
 summaryByActivityAndSubject  <- allData %>%
     group_by(activity,subjId) %>%
-    summarise_each("mean",4:9) %>% %>%
+    summarise_each("mean",4:9) %>% 
     rename(avgMeanXAcc = meanXAcc, avgMeanYAcc = meanYAcc, avgMeanZAcc = meanZAcc,
-           avgStdXAcc = stdXAcc, avgStdYAcc = stdYAcc, avgStdZAcc = stdZAcc)
-    print
+           avgStdXAcc = stdXAcc, avgStdYAcc = stdYAcc, avgStdZAcc = stdZAcc) 
+    
 
 write.table(summaryByActivityAndSubject, "sum_table.txt", row.name = FALSE)
     
